@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" type="text/css" href="contact.style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>CodingStella</h2>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit">🔍</button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="exit.html">Exit</a>
+        </div>
+    </aside>
+
+    <!-- Content -->
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <h2>Contact Form</h2>
+        <form action="send_email.php" method="post">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="firstname">First Name:</label>
+                <input type="text" name="firstname" required><br><br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" name="lastname" required><br><br>
+                <label for="message">Message:</label>
+                <textarea name="message" rows="4" cols="50"></textarea><br><br>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+    
+    <video src="Video/Flowers.mp4" width="500" height="315" controls autoplay muted></video>
+    
+    <footer>
+        <p>Contact us at <span style="font-weight: bolder; color: blue;">your_email@example.com</span></p>
+    </footer>
+</body>
+</html>

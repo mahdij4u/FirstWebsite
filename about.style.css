@@ -1,0 +1,219 @@
+/* You can keep the same CSS styles for the about page */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #eceff1; /* Viking-themed muted background */
+    padding-left: 50px; /* Space for the sidebar */
+}
+
+/* Style the header */
+header, footer {
+    background-color: #34515e; /* Oceanic deep blue */
+    color: #cfd8dc; /* Light grey for text */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the content section */
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+article {
+    /* Other styles */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* You might need to adjust this value */
+}
+
+img {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    max-width: 200px; /* Sets the maximum width to 200 pixels */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 50%; /* Rounded corners for images */
+}
+
+/* Style the footer */
+footer {
+    background-color: #34515e; /* Oceanic deep blue */
+    color: #cfd8dc;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the blockquote */
+blockquote {
+    font-style: italic;
+    font-size: 1.5em;
+    border-left: 4px solid #000; /* Thicker border for blockquote */
+    padding-left: 20px;
+    margin-top: 20px;
+    color: #777; /* Lighter color for blockquote text */
+}
+
+blockquote footer {
+    text-align: right;
+}
+
+/* Sidebar specific styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #37474f; /* A darker grey for the sidebar, like weathered steel */
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header,
+.sidebar-footer {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul li {
+    display: flex;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: #cfd8dc; /* Adjust the color to match your theme */
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a:focus {
+    background-color: #546e7a; /* A lighter grey for hover, like the blade of an axe */
+}
+
+.search-container {
+    padding: 0px;
+}
+
+.search-container input[type="text"] {
+    width: calc(100% - 50px); /* Adjusted width for search bar */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #546e7a;
+    border-radius: 5px;
+}
+
+.search-container button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    color: #cfd8dc;
+    cursor: pointer;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 1024px) {
+    .content-section {
+        margin-left: 20px;
+    }
+
+    article {
+        width: 45%; /* Adjust width for tablet and smaller
+/* laptop screens */
+}
+
+.sidebar {
+    width: 10%;
+}
+}
+
+@media screen and (max-width: 768px) {
+article {
+    width: 90%; /* Adjust width for tablet screens */
+}
+
+/* Sidebar adjustments for tablet screens */
+.sidebar {
+    width: 60px; /* Compact sidebar for smaller screens */
+    padding-top: 20px;
+}
+
+.sidebar-header h2,
+.sidebar-footer a,
+.sidebar-nav ul li a {
+    display: none; /* Hide text for compact view */
+}
+}
+
+@media screen and (max-width: 480px) {
+body {
+    padding-left: 0;
+}
+
+.sidebar {
+    width: 100%; /* Full-width sidebar for mobile devices */
+    height: auto;
+    position: relative;
+}
+
+.search-container input[type="text"],
+.search-container button {
+    width: 90%;
+    margin: 0 auto; /* Center align the search bar and button */
+}
+
+.content-section {
+    margin: 20px 0;
+}
+
+article {
+    width: 100%; /* Full-width articles for mobile devices */
+}
+}
+
+/* Style the content class for a responsive layout */
+.content {
+transition: margin-left 0.3s; /* Smooth transition for sidebar toggle */
+}
+
+/* Ensure that the content area covers the area not occupied by the sidebar */
+@media screen and (min-width: 1025px) {
+.content {
+    margin-left: 250px;
+}
+}
+
+@media screen and (max-width: 1024px) {
+.content {
+    margin-left: 0;
+}
+}
+
+/* Content padding for mobile devices */
+@media screen and (max-width: 480px) {
+.content {
+    padding: 0 10px;
+}
+}
